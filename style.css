@@ -251,7 +251,7 @@ body {
 
 .header {
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .nav {
@@ -536,6 +536,10 @@ input::-webkit-inner-spin-button {
 .landing__ibus,
 .landing__vol {
   font-weight: 600;
+}
+
+.landing__container--4 {
+  margin-bottom: 2em;
 }
 
 .landing__price {
