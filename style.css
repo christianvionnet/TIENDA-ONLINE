@@ -1,0 +1,573 @@
+/* RESET */
+
+/* Aquí definimos las Custom properties */
+:root {
+  --color-primario: #181818;
+  --color-secundario: #f0f0f0;
+
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+
+  --verde-primario: #75934c;
+  --verde-secundario: #4b573a;
+  --verde-terciario: #9caa74;
+}
+
+/* Las adaptamos al modo oscuro */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #f0f0f0;
+    --color-secundario: #181818;
+  }
+} */
+
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primario: black;
+    --color-secundario: white;
+  }
+}
+
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  object-fit: cover;
+  /* opcional */
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+}
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  /* opcional */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  line-height: 1.4em;
+  hyphens: auto;
+  font-smooth: always;
+}
+
+/* RESET */
+
+.header {
+  width: 100%;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 1em;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.sticky {
+  position: fixed;
+}
+
+.nav__img {
+  width: 50px;
+  z-index: 1;
+}
+
+.nav__img img {
+  border-radius: 50%;
+}
+
+.nav__h1 {
+  color: var(--color-secundario);
+  z-index: 1;
+  font-size: 20px;
+  padding: 0.5em;
+}
+
+.nav__buttons {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nav__cart {
+  border-radius: 0.5em;
+  padding: 0 1em;
+}
+
+svg {
+  width: 35px;
+  fill: var(--color-secundario);
+}
+
+.nav__menu {
+  padding: 0.5em;
+  color: var(--color-secundario);
+  border: 1px solid var(--color-secundario);
+  border-radius: 0.2em;
+}
+
+.landing {
+  width: 100%;
+  /* height: 100vh; */
+  /* position: absolute; */
+  top: 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__container--1 {
+  width: 100%;
+  background: url(image/background-5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.landing__h2,
+.landing__p {
+  color: var(--color-secundario);
+  padding: 1em;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+}
+
+.landing__p {
+  font-size: 24px;
+  padding: 2em;
+}
+
+.landing__h2--dark {
+  color: var(--color-primario);
+  padding-bottom: 0.5em;
+}
+
+.landing__p--dark {
+  color: var(--color-primario);
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 0 2em 1em;
+}
+
+.overlay div {
+  position: relative;
+}
+
+.landing__p::before {
+  content: "";
+  width: 30px;
+  height: auto;
+  border: 2px solid darkgoldenrod;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.landing__p::after {
+  content: "";
+  width: 30px;
+  height: auto;
+  border: 2px solid darkgoldenrod;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.landing__img {
+  position: relative;
+}
+
+.landing__img img {
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+.landing__container--2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+
+.landing__button {
+  font-size: 20px;
+  padding: 0.5em 3em;
+  border: 1px solid var(--color-primario);
+  border-radius: 0.1em;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.landing__img--2 {
+  /* width: 100%; */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2em 0;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 1; */
+}
+
+.landing__img--2 img {
+  height: 250px;
+}
+
+.landing__h2--drinks {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.landing__container--3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+
+.landing__prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  color: var(--color-secundario);
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.landing__prices span {
+  padding: 0.5em 0;
+}
+
+.landing__li {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.landing__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-primario);
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.landing__bar div {
+  display: flex;
+}
+
+.landing__style {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.landing__add,
+.landing__substract {
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  background: var(--verde-primario);
+  color: var(--color-secundario);
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.landing__add:hover,
+.landing__substract:hover {
+  background: var(--verde-secundario);
+}
+
+.landing__input {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: auto 0;
+  border: none;
+  font-size: 24px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.landing__ibus,
+.landing__vol {
+  font-weight: 600;
+}
+
+.landing__price {
+  margin-top: 0.5em;
+  font-size: 28px;
+}
+
+.footer {
+  width: 100%;
+  background: var(--color-primario);
+  /* position: relative;
+  z-index: 2; */
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer p {
+  color: var(--color-secundario);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.footer__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__media img {
+  width: 40px;
+  margin-right: 1em;
+}

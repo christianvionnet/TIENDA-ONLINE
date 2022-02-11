@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="image/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>TBC - Tucumán Brewing Company</title>
+  </head>
+  <!-- BODY -->
+  <body class="body">
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__img">
+          <a href="#">
+            <img src="image/logo.png" alt="tbc-logo" />
+            <!-- <h1 class="nav__h1"><strong>Tucumán Brewing Company</strong></h1> -->
+          </a>
+        </div>
+        <div class="nav__buttons">
+          <a class="nav__cart" href="#">
+            <svg
+              class="svg__art"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <path
+                d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
+              />
+            </svg>
+          </a>
+          <button class="nav__menu">Menú</button>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER -->
+    <main class="main">
+      <article class="landing">
+        <!-- LANDING 1 -->
+        <article class="landing__container landing__container--1">
+          <div class="overlay">
+            <h2 class="landing__h2">ESPECIALISTAS EN CERVEZA ARTESANAL</h2>
+            <div>
+              <p class="landing__p">Para verdaderos amantes de la cerveza</p>
+            </div>
+          </div>
+        </article>
+        <!-- LANDING 1 -->
+        <div class="landing__img">
+          <img src="image/lupulo.webp" alt="beer-image" />
+        </div>
+        <!-- LANDING 2 -->
+        <article class="landing__container landing__container--2">
+          <div>
+            <h2 class="landing__h2 landing__h2--dark">Cerveza con historia</h2>
+            <p class="landing__p--dark">
+              Nuestra historia comienza cuando... Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Nesciunt optio culpa ibussitatibus
+              fuga officia sed, nisi incidunt ea vero illum eligendi blanditiis
+              mollitia fugiat iusto atque, quis suscipit ullam aliquid!
+            </p>
+            <a href="#">
+              <button class="landing__button" id="seeMore">Ver más</button>
+            </a>
+          </div>
+        </article>
+        <!-- LANDING 2 -->
+        <!-- LANDING 3 -->
+        <article class="landing__container landing__container--3">
+          <div class="landing__img--2">
+            <img
+              src="image/120342080_192883139037392_7417091487446061654_n.jpg"
+              alt="beer-image"
+            />
+            <h2 class="landing__h2 landing__h2--drinks">Nuestras birras</h2>
+            <div class="landing__prices">
+              <span>1/2 pinta $200</span>
+              <span>Pinta $280</span>
+            </div>
+          </div>
+          <div>
+            <ul class="landing__ul">
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">Golden</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>Dorada, liviana y de cuerpo medio</p>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus">18 ibus</span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol">5% vol</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">Honey</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>Dorado intenso, balanceada con fino aroma y sabor cítrico</p>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus">18 ibus</span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol">7% vol</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">Porter</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>Oscura con reflejos rubí y amargor moderado</p>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus">24 ibus</span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol">6% vol</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">Scottish</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <span>Rojiza con cuerpo entero y balanceada</span>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus">22 ibus</span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol">5,5% vol</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">IPA</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>Dorado intenso, con fuerte sabor y gran carácter</p>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus">41 ibus</span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol">6,5% vol</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">Orange</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>
+                  Color pálida, refrescante y lupulada, saborizada con naranjas
+                  tucumanas
+                </p>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus">25 ibus</span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol">5% vol</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- LANDING 3 -->
+        <!-- LANDING 4 -->
+        <article class="landing__container landing__container--4">
+          <div class="landing__img--2">
+            <img src="image/pizza.jpg" alt="beer-image" />
+            <h2 class="landing__h2 landing__h2--drinks">Nuestras pizzas</h2>
+            <div class="landing__prices">
+              <span>Receta </span>
+              <span>100% italiana</span>
+            </div>
+          </div>
+          <div>
+            <ul class="landing__ul">
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">BAMBÚ</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>QUESOFU + CHAMPIÑÓN + TOMATE CHERRY + ALBAHACA</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">CAPRESE</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>MUZZARELLA + TOMATE CHERRY + ALBAHACA</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">CAPRICCIOSA</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>
+                  MUZZARELLA + JAMÓN COCIDO + ALCAUCIL + CHAMPIÑÓN + OLIVAS
+                  NEGRAS
+                </p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">ESPECIAL</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <span
+                  >MUZZARELLA + JAMÓN COCIDO + MORRONES ASADOS + OLIVAS VERDES +
+                  ORÉGANO</span
+                >
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">FUGAZZETA</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>MUZZARELLA + CEBOLLA + ORÉGANO (SIN SALSA)</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">MARINARA</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>
+                  SALSA DE TOMATE + AJO + ALBAHACA + ACEITE DE OLIVA (SIN QUESO)
+                </p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">MUZZARELLA</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>MUZZARELLA + OLIVAS VERDES + ORÉGANO</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">PALMITOS</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>MUZZARELLA + JAMÓN COCIDO + PALMITOS + SALSA GOLF</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">PEPPERONI</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>MUZZARELLA + PEPPERONI + AJÍ MOLIDO</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">PROSCIUTTO</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <span>MUZZARELLA + JAMÓN CRUDO + ESCAMAS DE PARMESANO</span>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">QUATRO FROMAGI</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>MUZZARELLA + DAMBO + AZUL + SARDO + OLIVAS NEGRAS</p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+              <li class="landing__li">
+                <div class="landing__bar">
+                  <h3 class="landing__style">TERNERA</h3>
+                  <div>
+                    <button class="landing__substract">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add">+</button>
+                  </div>
+                </div>
+                <p>
+                  MUZZARELLA + TERNERA + MORRONES ASADOS + HUEVOS + OLIVAS
+                  VERDES
+                </p>
+                <div class="landing__price">
+                  <span>$850</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <!-- LANDING 4 -->
+      </article>
+    </main>
+    <footer class="footer">
+      <div>
+        <p>Tucumán Brewing Company - TBC ®</p>
+        <p>Diseño Christian Vionnet</p>
+      </div>
+      <div>
+        <div class="footer__media">
+          <a href="https://www.facebook.com/TBC.CervezaArtesanal">
+            <img src="image/media1.png" alt="facebook-logo"
+          /></a>
+
+          <a href="https://www.instagram.com/tbc.cervezaartesanal/?hl=es-la">
+            <img src="image/media2.png" alt="instagram-logo"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+  <!-- BODY -->
+</html>
