@@ -6,8 +6,6 @@ const navbar = document.querySelector(".nav"),
   input = document.querySelectorAll(".landing__input"),
   buttonsConfirm = document.querySelectorAll(".landing__button--green");
 
-let order = [];
-
 window.onscroll = () => {
   if (window.pageYOffset > 640) {
     navbar.classList.add("sticky");
@@ -33,6 +31,19 @@ buttonsSub.forEach((button, i) => {
       input[i].value = number - 1;
     }
     // console.log(items[i].textContent);
+  });
+});
+
+let order = [];
+
+buttonsConfirm.forEach((button, i) => {
+  buttonsConfirm[i].addEventListener("click", () => {
+    items.forEach((item, i) => {
+      if (input[i] != 0) {
+        order.push(items[i].textContent);
+      }
+    });
+    console.log(order);
   });
 });
 
