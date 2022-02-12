@@ -426,6 +426,17 @@ svg {
   margin: 0 auto;
 }
 
+.landing__button--green {
+  border-color: var(--verde-primario);
+  color: var(--verde-primario);
+  margin: 0.5em auto;
+}
+
+.landing__button--green:active {
+  background: var(--verde-primario);
+  color: var(--color-secundario);
+}
+
 .landing__img--2 {
   /* width: 100%; */
   height: 100%;
@@ -513,8 +524,8 @@ svg {
   line-height: 30px;
 }
 
-.landing__add:hover,
-.landing__substract:hover {
+.landing__add:active,
+.landing__substract:active {
   background: var(--verde-secundario);
 }
 

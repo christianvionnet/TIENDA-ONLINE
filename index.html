@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Chritian Vionnet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="image/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +94,12 @@
                   <h3 class="landing__style">Golden</h3>
                   <div>
                     <button class="landing__substract">-</button>
-                    <input class="landing__input" type="number" value="0" />
+                    <input
+                      class="landing__input"
+                      type="number"
+                      value="0"
+                      min="0"
+                    />
                     <button class="landing__add">+</button>
                   </div>
                 </div>
@@ -206,6 +212,14 @@
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="landing__submit">
+            <button
+              class="landing__button landing__button--green"
+              type="submit"
+            >
+              Confirmar pedido
+            </button>
           </div>
         </article>
         <!-- LANDING 3 -->
@@ -401,6 +415,14 @@
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="landing__submit">
+            <button
+              class="landing__button landing__button--green"
+              type="submit"
+            >
+              Confirmar pedido
+            </button>
           </div>
         </article>
         <!-- LANDING 4 -->
