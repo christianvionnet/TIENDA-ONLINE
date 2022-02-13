@@ -3,8 +3,34 @@ const navbar = document.querySelector(".nav"),
   items = document.querySelectorAll(".landing__style"),
   buttonsAdd = document.querySelectorAll(".landing__add"),
   buttonsSub = document.querySelectorAll(".landing__substract"),
-  input = document.querySelectorAll(".landing__input"),
+  inputs = document.querySelectorAll(".landing__input"),
   buttonsConfirm = document.querySelectorAll(".landing__button--green");
+
+const form = document.querySelector(".landing__form");
+
+const sendOrder = (event) => {
+  event.preventDefault();
+  inputs.forEach((input, i) => {
+    if (inputs[i].value > 0) {
+      console.log(inputs[i].name, inputs[i].value);
+    }
+    inputs[i].value = 0;
+  });
+};
+
+form.addEventListener("submit", sendOrder);
+
+// const sendForm = (event) => {
+//   event.preventDefault();
+
+//   console.log(
+//     event.target.nombre,
+//     event.target.apellido.value,
+//     event.target.telefono.value
+//   );
+// };
+
+// form.addEventListener("submit", sendForm);
 
 window.onscroll = () => {
   if (window.pageYOffset > 640) {
@@ -16,36 +42,36 @@ window.onscroll = () => {
 
 buttonsAdd.forEach((button, i) => {
   buttonsAdd[i].addEventListener("click", () => {
-    let number = parseInt(input[i].value);
-    input[i].value = number + 1;
-    // console.log(items[i].textContent);
+    let number = parseInt(inputs[i].value);
+    inputs[i].value = number + 1;
   });
 });
 
 buttonsSub.forEach((button, i) => {
   buttonsSub[i].addEventListener("click", () => {
-    let number = parseInt(input[i].value);
+    let number = parseInt(inputs[i].value);
     if (number == 0) {
-      input[i].value = number;
+      inputs[i].value = number;
     } else {
-      input[i].value = number - 1;
+      inputs[i].value = number - 1;
     }
-    // console.log(items[i].textContent);
   });
 });
 
 let order = [];
 
-buttonsConfirm.forEach((button, i) => {
-  buttonsConfirm[i].addEventListener("click", () => {
-    items.forEach((item, i) => {
-      if (input[i] != 0) {
-        order.push(items[i].textContent);
-      }
-    });
-    console.log(order);
-  });
-});
+// buttonsConfirm.forEach((button, i) => {
+//   buttonsConfirm[i].addEventListener("click", () => {
+//     inputs.forEach((item, i) => {
+//       // if (inputs[i].value > 0) {
+//       //   order.push(items[i].textContent);
+//       //   console.log(order);
+//       // }
+//       // console.log(inputs[i].value);
+//       inputs[i].value == 0;
+//     });
+//   });
+// });
 
 // items.forEach((item, i) => {
 //   console.log(items[i].textContent);
