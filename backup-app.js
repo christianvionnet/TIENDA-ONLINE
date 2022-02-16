@@ -43,7 +43,9 @@ buttonsSub.forEach((button, i) => {
 
 let orderList = [];
 
-//Constructor para guardar los datos de la orden como un objeto
+// console.log("holis", orderList);
+
+//Constructor para guardar los datos de la orden
 class Order {
   constructor(item, quantity, price) {
     this.item = item;
@@ -53,48 +55,48 @@ class Order {
 }
 
 //Funcion para instanciar objeto para crear la lista del pedido
-//cuando haya hecho click en ENVIAR AL CARRITO
 const sendOrder = (event) => {
   event.preventDefault();
   inputs.forEach((input, i) => {
     if (inputs[i].value > 0) {
-      let price = items[i].lastElementChild.textContent.split("$"); //Tomo valor del precio
-      let newOrder = new Order(inputs[i].name, inputs[i].value, price[1]); //Instancio (creo) objeto con los valores de name, quantity y price
-      let newOrderJson = JSON.stringify(newOrder);
-      orderList.push(newOrderJson); //Agrego ese objeto dentro de un array, es decir creo un array de objetos
-      // localStorage.setItem("ordenFinal", orderLine);
+      let price = items[i].lastElementChild.textContent.split("$");
+      let newOrder = new Order(inputs[i].name, inputs[i].value, price[1]);
+      orderList.push(newOrder);
+      // console.log(newOrder);
+      // console.log(inputs[i].name, inputs[i].value, price[1]);
     }
     inputs[i].value = 0;
   });
-  console.log(orderList);
   openOrder(orderList);
+
+  // console.log(orderList.price);
 };
 
-//Listener para cuando haga click en ENVIAR AL CARRITO
 form.addEventListener("submit", sendOrder);
 
-let emptyOrder; //Variable a usar cuando el carrito esté vacío
-let orderLine; //Variable a usar cuando cree una nueva linea del pedido
+// cart.addEventListener("click", openOrder);
+
+let empyOrder;
+let orderLine;
 
 //Funcion que renderiza el carrito de compras con los items, cantidad y precio total
 const openOrder = (order) => {
   modal.style.display = "flex";
-  // console.log(order);
-
+  console.log(order);
   //Si no hay ningun elemento agregado al pedido, muestro mensaje
-  // console.log(order.length);
   if (order.length == 0) {
-    emptyOrder = document.createElement("li");
-    emptyOrder.textContent = "¡UPS! AQUÍ NO HAY NADA";
-    emptyOrder.style.width = "100%";
-    emptyOrder.style.textAlign = "center";
-    emptyOrder.style.margin = "40px auto";
-    modalList.append(emptyOrder);
+    empyOrder = document.createElement("li");
+    empyOrder.textContent = "¡UPS! AQUÍ NO HAY NADA";
+    empyOrder.style.width = "100%";
+    empyOrder.style.textAlign = "center";
+    empyOrder.style.margin = "40px auto";
+    modalList.append(empyOrder);
+    // console.log("carrito vacio");
   } else {
+    // modalList.removeChild(empyOrder);
     order.forEach((e, i) => {
-      let orderLineJson = JSON.parse(order[i]);
-      console.log(orderLineJson);
-
+      // console.log(order[i].item, order[i].quantity, order[i].price);
+      console.log(order);
       orderLine = document.createElement("li");
       let lineItem = document.createElement("span");
       let lineQuantity = document.createElement("span");
@@ -102,49 +104,56 @@ const openOrder = (order) => {
 
       //Estilos para el contenedor de la lista
       orderLine.classList.add("order__line");
+      // orderLine.style.width = "100%";
+      // orderLine.style.display = "flex";
+      // orderLine.style.justifyContent = "space-between";
+      // orderLine.style.padding = "10px 20px";
 
       //Estilos para el contenedor de las lineas
       modalList.classList.add("modal__list");
+      // modalList.style.width = "100%";
+      // modalList.style.display = "flex";
+      // modalList.style.flexDirection = "column";
+      // modalList.style.alignItems = "flex-start";
 
       //Estilos para cada elemento span de la linea
       lineItem.classList.add("line__item");
       lineQuantity.classList.add("line__quantity");
       linePrice.classList.add("line__price");
+      // lineItem.style.width = "70%";
+      // lineQuantity.style.width = "10%";
+      // linePrice.style.width = "15%";
 
       //Inserción de los elementos en el body del modal
-      lineItem.append(orderLineJson.item);
-      lineQuantity.append(orderLineJson.quantity);
-      linePrice.append(orderLineJson.price * orderLineJson.quantity);
+      lineItem.append(order[i].item);
+      lineQuantity.append(order[i].quantity);
+      linePrice.append(parseInt(order[i].price) * parseInt(order[i].quantity));
       orderLine.append(lineItem, lineQuantity, linePrice);
       modalList.append(orderLine);
     });
     orderList = [];
   }
+
+  // console.log("holas", orderList);
 };
 
 //Listener para carrito de compras
 cart.addEventListener("click", openOrder);
 
-//Listener para cerrar carrito con cruz superior
 modalClose.addEventListener("click", () => {
   modal.style.display = "none";
   console.log(orderLine);
-  console.log(emptyOrder);
+  console.log(empyOrder);
 
   if (orderLine) {
     modalList.removeChild(orderLine);
-  } else if (emptyOrder) {
-    modalList.removeChild(emptyOrder);
+  } else if (empyOrder) {
+    modalList.removeChild(empyOrder);
   }
 });
 
-//Funcion para cerrar carrito desde botón AGREGAR para agregar mas items
 const addMoreItems = () => {
   modal.style.display = "none";
-  if (emptyOrder) {
-    modalList.removeChild(emptyOrder);
-  }
 };
 
-//Listener para cerrar carrito desde botón AGREGAR y agregar mas items
 buttonAddItem.addEventListener("click", addMoreItems);
