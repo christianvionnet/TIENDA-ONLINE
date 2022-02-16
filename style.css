@@ -439,6 +439,19 @@ svg {
   color: var(--color-secundario);
 }
 
+.landing__button--filled {
+  background-color: var(--verde-primario);
+  color: var(--color-secundario);
+  border: none;
+  margin: 0.5em auto;
+}
+
+.landing__button--filled:active {
+  background: var(--color-secundario);
+  color: var(--verde-primario);
+  border: 1px solid var(--verde-primario);
+}
+
 .landing__img--2 {
   /* width: 100%; */
   height: 100%;
@@ -578,8 +591,6 @@ input::-webkit-inner-spin-button {
 .footer {
   width: 100%;
   background: var(--color-primario);
-  /* position: relative;
-  z-index: 2; */
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -602,4 +613,111 @@ input::-webkit-inner-spin-button {
 .footer__media img {
   width: 40px;
   margin-right: 1em;
+}
+
+.landing__modal {
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  width: 90%;
+  height: auto;
+  max-height: 500px;
+
+  background: var(--color-secundario);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-primario);
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal__title {
+  margin-top: 2em;
+  padding: 0 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.order__line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.order__line:nth-child(1) {
+  text-align: center;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  background: var(--color-secundario);
+}
+
+.modal__list {
+  width: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.line__item {
+  width: 40%;
+}
+
+.line__quantity {
+  width: 30%;
+}
+
+.line__price {
+  width: 30%;
+}
+
+.line__item,
+.line__quantity,
+.line__price {
+  text-align: center;
+}
+
+.modal__buttons {
+  display: flex;
+}
+
+.modal__button {
+  /* width: 100%; */
+  font-size: 18px;
+  padding: 0.5em;
+  border: 1px solid var(--verde-primario);
+  border-radius: 0.1em;
+  text-transform: uppercase;
+  margin: 0.5em 0.5em 1em;
+}
+
+hr {
+  width: 80%;
+}
+
+.modal__total {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
