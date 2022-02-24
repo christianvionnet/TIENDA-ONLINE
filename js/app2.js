@@ -82,6 +82,8 @@ const setCartPlus = (objeto) => {
     quantity: 1,
   };
 
+  objeto.querySelector(".landing__input").value = 1;
+
   if (newCart.hasOwnProperty(product.id)) {
     objeto.querySelector(".landing__input").value =
       newCart[product.id].quantity + 1;
@@ -107,6 +109,8 @@ const setCartLess = (objeto) => {
       product.quantity = newCart[product.id].quantity;
     } else {
       product.quantity = newCart[product.id].quantity - 1;
+      objeto.querySelector(".landing__input").value =
+        newCart[product.id].quantity - 1;
     }
   }
 
