@@ -43,8 +43,6 @@ buttonsSub.forEach((button, i) => {
 
 let orderList = [];
 
-// console.log("holis", orderList);
-
 //Constructor para guardar los datos de la orden
 class Order {
   constructor(item, quantity, price) {

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 7,
+    "title": "BAMBÚ",
+    "info": "QUESOFU + CHAMPIÑÓN + TOMATE CHERRY + ALBAHACA",
+    "price": 850,
+    "image": "url(/image/golden.jpg)"
+  },
+  {
+    "id": 8,
+    "title": "CAPRESE",
+    "info": "MUZZARELLA + TOMATE CHERRY + ALBAHACA",
+    "price": 850,
+    "image": "url(/image/honey.jpg)"
+  },
+  {
+    "id": 9,
+    "title": "CAPRICCIOSA",
+    "info": "MUZZARELLA + JAMÓN COCIDO + ALCAUCIL + CHAMPIÑÓN + OLIVAS NEGRAS",
+    "price": 850,
+    "image": "url(/image/porter.jpg)"
+  },
+  {
+    "id": 10,
+    "title": "ESPECIAL",
+    "info": "MUZZARELLA + JAMÓN COCIDO + MORRONES ASADOS + OLIVAS VERDES + ORÉGANO",
+    "price": 850,
+
+    "image": "url(/image/scottish.jpg)"
+  },
+  {
+    "id": 11,
+    "title": "FUGAZZETA",
+    "info": "MUZZARELLA + CEBOLLA + ORÉGANO (SIN SALSA)",
+    "price": 850,
+
+    "image": "url(/image/ipa.jpg)"
+  },
+  {
+    "id": 12,
+    "title": "MARINARA",
+    "info": "SALSA DE TOMATE + AJO + ALBAHACA + ACEITE DE OLIVA (SIN QUESO)",
+    "price": 850,
+    "image": "url(/image/orange.jpg)"
+  },
+  {
+    "id": 13,
+    "title": "MUZZARELLA",
+    "info": "MUZZARELLA + OLIVAS VERDES + ORÉGANO",
+    "price": 850,
+    "image": "url(/image/golden.jpg)"
+  },
+  {
+    "id": 14,
+    "title": "PALMITOS",
+    "info": "MUZZARELLA + JAMÓN COCIDO + PALMITOS + SALSA GOLF",
+    "price": 850,
+    "image": "url(/image/honey.jpg)"
+  },
+  {
+    "id": 15,
+    "title": "PEPPERONI",
+    "info": "MUZZARELLA + PEPPERONI + AJÍ MOLIDO",
+    "price": 850,
+    "image": "url(/image/porter.jpg)"
+  },
+  {
+    "id": 16,
+    "title": "PROSCIUTTO",
+    "info": "MUZZARELLA + JAMÓN CRUDO + ESCAMAS DE PARMESANO",
+    "price": 850,
+
+    "image": "url(/image/scottish.jpg)"
+  },
+  {
+    "id": 17,
+    "title": "QUATRO FROMAGI",
+    "info": "MUZZARELLA + DAMBO + AZUL + SARDO + OLIVAS NEGRAS",
+    "price": 850,
+
+    "image": "url(/image/ipa.jpg)"
+  },
+  {
+    "id": 18,
+    "title": "TERNERA",
+    "info": "MUZZARELLA + TERNERA + MORRONES ASADOS + HUEVOS + OLIVAS VERDES",
+    "price": 850,
+    "image": "url(/image/orange.jpg)"
+  }
+]

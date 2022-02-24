@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Golden",
+    "info": "Dorada, liviana y de cuerpo medio",
+    "price": 250,
+    "ibu": "18 ibus",
+    "abv": "5%",
+    "image": "url(/image/golden.jpg)"
+  },
+  {
+    "id": 2,
+    "title": "Honey",
+    "info": "Dorado intenso, balanceada con fino aroma y sabor cítrico",
+    "price": 250,
+    "ibu": "18 ibus",
+    "abv": "7%",
+    "image": "url(/image/honey.jpg)"
+  },
+  {
+    "id": 3,
+    "title": "Porter",
+    "info": "Oscura con reflejos rubí y amargor moderado",
+    "price": 250,
+    "ibu": "24 ibus",
+    "abv": "6%",
+    "image": "url(/image/porter.jpg)"
+  },
+  {
+    "id": 4,
+    "title": "Scottish",
+    "info": "Rojiza con cuerpo entero y balanceada",
+    "price": 250,
+    "ibu": "22 ibus",
+    "abv": "5.5%",
+    "image": "url(/image/scottish.jpg)"
+  },
+  {
+    "id": 5,
+    "title": "IPA",
+    "info": "Dorado intenso, con fuerte sabor y gran carácter",
+    "price": 250,
+    "ibu": "41 ibus",
+    "abv": "6.5%",
+    "image": "url(/image/ipa.jpg)"
+  },
+  {
+    "id": 6,
+    "title": "Orange",
+    "info": "Color pálida, refrescante y lupulada, saborizada con naranjas tucumanas",
+    "price": 250,
+    "ibu": "25 ibus",
+    "abv": "5%",
+    "image": "url(/image/orange.jpg)"
+  }
+]
