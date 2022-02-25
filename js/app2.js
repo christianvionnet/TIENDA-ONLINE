@@ -1,16 +1,48 @@
+const sticky = window.pageYOffset;
 const beerItemsBody = document.querySelector("#beer-items");
 const pizzaItemsBody = document.querySelector("#pizza-items");
+const modalContainer = document.querySelector("#modal-container");
+const modalItems = document.querySelector("#modal__template--items").content;
 const beerTemplate = document.querySelector("#beer__template").content;
 const pizzaTemplate = document.querySelector("#pizza__template").content;
-// const modalTemplate = document.querySelector("#modal__template").content;
+const modalTemplate = document.querySelector("#modal__template").content;
+const navbar = document.querySelector(".nav");
 const fragment = document.createDocumentFragment();
-let newCart = {};
+const buttonSendOrder = document.querySelector("#button-send-order");
+const modalTBody = modalTemplate.querySelector("#modal__tbody");
+const modalClose = modalTemplate.querySelector(".modal__close");
+// const buttonModifyOrder = document
+
+let newCart = {}; // It will be our objects collection
+
+window.onscroll = () => {
+  if (window.pageYOffset > 640) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
 });
 
 beerItemsBody.addEventListener("click", (e) => addCart(e));
+pizzaItemsBody.addEventListener("click", (e) => {
+  addCart(e);
+});
+
+buttonSendOrder.addEventListener("click", (e) => {
+  e.preventDefault();
+  let newCartJson = JSON.stringify(newCart);
+  localStorage.setItem("finalOrder", newCartJson);
+  renderModal();
+});
+
+modalClose.addEventListener("click", (e) => {
+  // console.log(e.target.parentElement.parentElement);
+  e.target.parentElement.parentElement.style.display = "none";
+});
 
 //Function for retreiving data from APIs
 const fetchData = async () => {
@@ -58,14 +90,35 @@ const renderItems2 = (data2) => {
   pizzaItemsBody.appendChild(fragment);
 };
 
+//Fuction for taking the final order and rendering the modal with it
+const renderModal = () => {
+  let finalOrderJson = localStorage.getItem("finalOrder");
+  let finalOrder = JSON.parse(finalOrderJson);
+  // console.log(modalTemplate);
+  // if (modalTemplate) {
+  modalTemplate.querySelector(".modal__total").textContent = "0";
+  // }
+
+  Object.values(finalOrder).forEach((product) => {
+    modalItems.querySelector(".modal__item").textContent = product.title;
+    modalItems.querySelector(".modal__quantity").textContent = product.quantity;
+    modalItems.querySelector(".modal__price").textContent =
+      product.price * product.quantity;
+    const clone = modalItems.cloneNode(true);
+
+    modalTemplate.querySelector(".modal__total").textContent =
+      parseInt(modalTemplate.querySelector(".modal__total").textContent) +
+      parseInt(modalItems.querySelector(".modal__price").textContent);
+    fragment.appendChild(clone);
+  });
+  modalTBody.appendChild(fragment);
+
+  modalContainer.appendChild(modalTemplate);
+};
+
 //Function for sending the product to the cart (depending on if we want to add or susbtract an item)
 const addCart = (e) => {
   if (e.target.classList.contains("landing__add")) {
-    // console.log(
-    //   e.target.parentElement.parentElement.parentElement.querySelector(
-    //     ".landing__input"
-    //   )
-    // );
     setCartPlus(e.target.parentElement.parentElement.parentElement);
   } else if (e.target.classList.contains("landing__substract")) {
     setCartLess(e.target.parentElement.parentElement.parentElement);
@@ -92,7 +145,8 @@ const setCartPlus = (objeto) => {
 
   newCart[product.id] = { ...product };
 
-  console.log(newCart);
+  // console.log(newCart);
+  // renderModal(newCart);
 };
 
 // Function for substracting an item to the cart
@@ -116,7 +170,8 @@ const setCartLess = (objeto) => {
 
   newCart[product.id] = { ...product };
 
-  console.log(newCart);
+  // console.log(newCart);
+  // renderModal(newCart);
 };
 
 const openCart = () => {};

@@ -138,14 +138,8 @@
               <template id="pizza__template">
                 <li class="landing__li">
                   <div class="landing__bar">
-                    <!-- <div class="landing__bambu"> -->
                     <h3 class="landing__style"></h3>
-                    <!-- <img
-                          class="landing__img--vegan"
-                          src="image/vegano.png"
-                          alt="vegan-icon"
-                        /> -->
-                    <!-- </div> -->
+
                     <div>
                       <button class="landing__substract" type="button">
                         -
@@ -166,6 +160,7 @@
             </div>
             <div class="landing__submit">
               <button
+                id="button-send-order"
                 class="landing__button landing__button--green"
                 type="submit"
               >
@@ -178,42 +173,47 @@
       </article>
       <!-- LANDING -->
 
-      <!-- MODAL -->
-      <article id="modal_items"></article>
-      <!-- MODAL -->
+      <!-- MODAL CONTAINER-->
+      <article id="modal-container"></article>
+      <!-- MODAL CONTAINER -->
 
       <!-- TEMPLATE MODAL -->
-      <template>
+      <template id="modal__template">
         <div class="landing__modal">
           <div class="modal__content">
             <div class="modal__close">X</div>
             <h3 class="modal__title">
               Ya casi lo tenés <br />¿Querés agregar algo más?
             </h3>
-
             <ul class="modal__list">
-              <li class="modal__subtitle">
-                <span class="line__item">Pedido</span>
-                <span class="line__quantity">Cantidad</span>
-                <span class="line__price">Subtotal</span>
-              </li>
-              <li class="empty__order">¡UPS! AQUÍ NO HAY NADA</li>
-              <!-- AQUI IRÁN INSERTADOS LOS ITEMS EL PEDIDO -->
+              <table class="modal__table">
+                <thead class="modal__thead">
+                  <tr class="modal__tr">
+                    <td>Pedido</td>
+                    <td>Cantidad</td>
+                    <td>Subtotal</td>
+                  </tr>
+                </thead>
+                <tbody class="modal__tbody" id="modal__tbody"></tbody>
+              </table>
             </ul>
             <hr />
-            <div class="modal__total">
-              <p>Total</p>
-              <p></p>
+            <div class="modal__total--container">
+              <span>Total</span>
+              <div>
+                $
+                <span class="modal__total"></span>
+              </div>
             </div>
             <div class="modal__buttons">
               <button
-                id="buttonAdd"
+                id="button-modify-order"
                 class="modal__button landing__button--filled"
               >
                 Modificar
               </button>
               <button
-                id="buttonConfirm"
+                id="button-confirm-order"
                 class="modal__button landing__button--green"
                 type="button"
               >
@@ -223,7 +223,17 @@
           </div>
         </div>
       </template>
-      <!-- TEMPLATE MODAL -->
+      <!-- TEMPLATE MODAL  -->
+
+      <!-- TEMPLATE MODAL ITEMS -->
+      <template id="modal__template--items">
+        <tr class="modal__tr">
+          <td class="modal__item"></td>
+          <td class="modal__quantity"></td>
+          <td class="modal__price"></td>
+        </tr>
+      </template>
+      <!-- TEMPLATE MODAL ITEMS -->
     </main>
     <footer class="footer">
       <div>
