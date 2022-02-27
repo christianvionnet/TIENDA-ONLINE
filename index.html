@@ -23,7 +23,6 @@
         <div class="nav__img">
           <a href="#">
             <img src="image/logo.png" alt="tbc-logo" />
-            <!-- <h1 class="nav__h1"><strong>Tucumán Brewing Company</strong></h1> -->
           </a>
         </div>
         <div class="nav__buttons">
@@ -47,20 +46,24 @@
       <!-- LANDING -->
       <article class="landing">
         <!-- LANDING 1 -->
-        <article class="landing__container landing__container--1">
-          <div class="overlay">
-            <h2 class="landing__h2">SABEMOS DE CERVEZA ARTESANAL</h2>
-            <div>
-              <p class="landing__p">Para verdaderos amantes de la cerveza</p>
+        <article>
+          <div class="landing__container--1">
+            <div class="overlay">
+              <h2 class="landing__h2">SABEMOS DE CERVEZA ARTESANAL</h2>
+              <div>
+                <p class="landing__p">Para verdaderos amantes de la cerveza</p>
+              </div>
             </div>
           </div>
         </article>
         <!-- LANDING 1 -->
-        <div class="landing__img">
+
+        <article class="landing__img">
           <img src="image/lupulo.webp" alt="beer-image" />
-        </div>
+        </article>
+
         <!-- LANDING 2 -->
-        <article class="landing__container landing__container--2">
+        <article class="landing__container--2">
           <div>
             <h2 class="landing__h2 landing__h2--dark">Cerveza con historia</h2>
             <p class="landing__p--dark">
@@ -73,103 +76,135 @@
           </div>
         </article>
         <!-- LANDING 2 -->
-        <form class="landing__form">
-          <!-- LANDING 3 CERVEZAS-->
-          <article class="landing__container landing__container--3">
-            <div class="landing__img--2">
-              <img
-                src="image/120342080_192883139037392_7417091487446061654_n.jpg"
-                alt="beer-image"
-              />
-              <h2 class="landing__h2 landing__h2--drinks">Nuestras birras</h2>
-              <div class="landing__prices">
-                <span></span>
-                <span>¿Ya las probaste?</span>
+
+        <!-- LANDING 3 CERVEZAS-->
+        <article class="landing__container--3">
+          <div class="landing__img--2">
+            <img
+              src="image/120342080_192883139037392_7417091487446061654_n.jpg"
+              alt="beer-image"
+            />
+            <h2 class="landing__h2 landing__h2--drinks">Nuestras birras</h2>
+            <div class="landing__prices">
+              <span>Lo nuestro...</span>
+              <span>¿Ya las probaste?</span>
+            </div>
+          </div>
+
+          <!-- BEER TEMPLATE CONTAINER -->
+          <div>
+            <ul class="landing__ul" id="beer-items"></ul>
+          </div>
+          <!-- BEER TEMPLATE CONTAINER -->
+
+          <!-- TEMPLATE BEER-->
+          <template id="beer__template">
+            <li class="landing__li">
+              <div class="landing__bar">
+                <h3 class="landing__style"></h3>
+                <div>
+                  <button class="landing__substract" type="button">-</button>
+                  <input class="landing__input" type="number" value="0" />
+                  <button class="landing__add" type="button">+</button>
+                </div>
+              </div>
+              <p class="landing__info"></p>
+              <div>
+                <span>Amargor</span>
+                <span class="landing__ibus"></span>
+              </div>
+              <div>
+                <span>Graduación</span>
+                <span class="landing__vol"></span>
+              </div>
+              <div class="landing__price--container">
+                <span>$</span>
+                <span class="landing__price"></span>
+              </div>
+            </li>
+          </template>
+          <!-- TEMPLATE BEER -->
+        </article>
+        <!-- LANDING 3 CERVEZAS -->
+
+        <!-- LANDING 4 PIZZAS -->
+        <article class="landing__container--4">
+          <div class="landing__img--2">
+            <img src="image/pizza.jpg" alt="beer-image" />
+            <h2 class="landing__h2 landing__h2--drinks">Nuestras pizzas</h2>
+            <div class="landing__prices">
+              <span>Receta </span>
+              <span>100% italiana</span>
+            </div>
+          </div>
+
+          <!-- PIZZA TEMPLATE CONTAINER -->
+          <div>
+            <ul class="landing__ul" id="pizza-items"></ul>
+          </div>
+          <!-- PIZZA TEMPLATE CONTAINER -->
+
+          <div class="landing__submit">
+            <button
+              id="button-send-order"
+              class="landing__button landing__button--green"
+              type="submit"
+            >
+              Enviar al carrito
+            </button>
+          </div>
+
+          <!-- TEMPLATE PIZZA -->
+          <template id="pizza__template">
+            <li class="landing__li">
+              <div class="landing__bar">
+                <h3 class="landing__style"></h3>
+                <div>
+                  <button class="landing__substract" type="button">-</button>
+                  <input class="landing__input" type="number" value="0" />
+                  <button class="landing__add" type="button">+</button>
+                </div>
+              </div>
+              <p class="landing__info"></p>
+              <div class="landing__price--container">
+                <span>$</span>
+                <span class="landing__price"></span>
+              </div>
+            </li>
+          </template>
+          <!-- TEMPLATE PIZZA -->
+        </article>
+        <!-- LANDING 4 PIZZAS -->
+
+        <!-- LANDING 5 -->
+        <article class="landing__container--5">
+          <div class="landing__img--2">
+            <img src="image/branch.jpg" alt="beer-image" />
+            <h2 class="landing__h2 landing__h2--drinks">Nuestras sucursales</h2>
+            <div class="landing__prices">
+              <span>Vení a</span>
+              <span>conocerlas</span>
+            </div>
+          </div>
+
+          <!-- BRANCH TEMPLATE CONTAINER -->
+          <div>
+            <ul id="branch-items"></ul>
+          </div>
+          <!-- BRANCH TEMPLATE CONTAINER -->
+
+          <template id="branch__template">
+            <div class="landing__branch">
+              <img alt="branch-image" />
+              <div class="branch__info hidden">
+                <h3></h3>
+                <p></p>
+                <a>Ver en mapa</a>
               </div>
             </div>
-            <div>
-              <ul class="landing__ul" id="beer-items"></ul>
-
-              <!-- TEMPLATE BEER-->
-              <template id="beer__template">
-                <li class="landing__li">
-                  <div class="landing__bar">
-                    <h3 class="landing__style"></h3>
-                    <div>
-                      <button class="landing__substract" type="button">
-                        -
-                      </button>
-                      <input class="landing__input" type="number" value="0" />
-                      <button class="landing__add" type="button">+</button>
-                    </div>
-                  </div>
-                  <p class="landing__info"></p>
-                  <div>
-                    <span>Amargor</span>
-                    <span class="landing__ibus"></span>
-                  </div>
-                  <div>
-                    <span>Graduación</span>
-                    <span class="landing__vol"></span>
-                  </div>
-                  <div class="landing__price--container">
-                    <span>$</span>
-                    <span class="landing__price"></span>
-                  </div>
-                </li>
-              </template>
-              <!-- TEMPLATE BEER -->
-            </div>
-          </article>
-          <!-- LANDING 3 CERVEZAS -->
-          <!-- LANDING 4 PIZZAS -->
-          <article class="landing__container landing__container--4">
-            <div class="landing__img--2">
-              <img src="image/pizza.jpg" alt="beer-image" />
-              <h2 class="landing__h2 landing__h2--drinks">Nuestras pizzas</h2>
-              <div class="landing__prices">
-                <span>Receta </span>
-                <span>100% italiana</span>
-              </div>
-            </div>
-            <div>
-              <ul class="landing__ul" id="pizza-items"></ul>
-              <!-- TEMPLATE PIZZA -->
-              <template id="pizza__template">
-                <li class="landing__li">
-                  <div class="landing__bar">
-                    <h3 class="landing__style"></h3>
-
-                    <div>
-                      <button class="landing__substract" type="button">
-                        -
-                      </button>
-                      <input class="landing__input" type="number" value="0" />
-                      <button class="landing__add" type="button">+</button>
-                    </div>
-                  </div>
-                  <p class="landing__info"></p>
-
-                  <div class="landing__price--container">
-                    <span>$</span>
-                    <span class="landing__price"></span>
-                  </div>
-                </li>
-              </template>
-              <!-- TEMPLATE PIZZA -->
-            </div>
-            <div class="landing__submit">
-              <button
-                id="button-send-order"
-                class="landing__button landing__button--green"
-                type="submit"
-              >
-                Enviar al carrito
-              </button>
-            </div>
-          </article>
-          <!-- LANDING 4 PIZZAS -->
-        </form>
+          </template>
+        </article>
+        <!-- LANDING 5 -->
       </article>
       <!-- LANDING -->
 
@@ -217,7 +252,7 @@
                 class="modal__button landing__button--green"
                 type="button"
               >
-                Confirmar
+                Ir al pago
               </button>
             </div>
           </div>
