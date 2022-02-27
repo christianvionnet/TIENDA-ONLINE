@@ -861,19 +861,20 @@ hr {
 .landing__container--6 a {
   width: 50%;
   font-size: 20px;
-  color: var(--verde-primario);
+  color: var(--color-primario);
   padding: 0.3em;
   margin-top: 0.5em;
-  border: 1px solid var(--verde-primario);
+  border: 1px solid var(--color-primario);
   border-radius: 0.2em;
   cursor: pointer;
   text-align: center;
+  text-transform: uppercase;
 }
 
-.landing__container--6 a:active {
+/* .landing__container--6 a:active {
   color: var(--color-secundario);
   background-color: var(--verde-primario);
-}
+} */
 
 .landing__container--6 p {
   white-space: pre-line;

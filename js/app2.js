@@ -218,7 +218,4 @@ const setCartLess = (objeto) => {
   }
 
   newCart[product.id] = { ...product };
-
-  // console.log(newCart);
-  // renderModal(newCart);
 };
