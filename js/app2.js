@@ -15,7 +15,7 @@ const buttonConfirmOrder = modalTemplate.querySelector("#button-confirm-order");
 const modalTBody = modalTemplate.querySelector("#modal__tbody");
 const modalClose = modalTemplate.querySelector(".modal__close");
 const landingModal = modalTemplate.querySelector(".landing__modal");
-const branchInfo = branchTemplate.querySelectorAll(".branch__info");
+// const branchInfo = branchTemplate.querySelectorAll(".branch__info");
 
 let newCart = {}; // It will be our objects collection
 
