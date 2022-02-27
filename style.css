@@ -850,3 +850,43 @@ hr {
   color: var(--color-primario);
   background: var(--color-secundario);
 }
+
+.landing__container--6 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__container--6 a {
+  width: 50%;
+  font-size: 20px;
+  color: var(--verde-primario);
+  padding: 0.3em;
+  margin-top: 0.5em;
+  border: 1px solid var(--verde-primario);
+  border-radius: 0.2em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.landing__container--6 a:active {
+  color: var(--color-secundario);
+  background-color: var(--verde-primario);
+}
+
+.landing__container--6 p {
+  white-space: pre-line;
+}
+
+.landing__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.landing__media img {
+  width: 40px;
+  margin: 0 1em;
+}
