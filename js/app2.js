@@ -71,13 +71,13 @@ modalClose.addEventListener("click", (e) => {
 //Function for retreiving data from APIs
 const fetchData = async () => {
   try {
-    const beerAPI = await fetch("/api.json");
+    const beerAPI = await fetch("/API/api.json");
     const beerData = await beerAPI.json();
 
-    const pizzaAPI = await fetch("/api2.json");
+    const pizzaAPI = await fetch("/API/api2.json");
     const pizzaData = await pizzaAPI.json();
 
-    const branchAPI = await fetch("/api3.json");
+    const branchAPI = await fetch("/API/api3.json");
     const branchData = await branchAPI.json();
 
     renderItems(beerData);
