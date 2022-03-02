@@ -15,6 +15,9 @@ const buttonConfirmOrder = modalTemplate.querySelector("#button-confirm-order");
 const modalTBody = modalTemplate.querySelector("#modal__tbody");
 const modalClose = modalTemplate.querySelector(".modal__close");
 const landingModal = modalTemplate.querySelector(".landing__modal");
+const buttonMenu = document.querySelector(".nav__menu");
+const navMenu = document.querySelector(".nav__container--menu");
+const arrowSVG = document.querySelector("#arrow-svg");
 // const branchInfo = branchTemplate.querySelectorAll(".branch__info");
 
 let newCart = {}; // It will be our objects collection
@@ -29,6 +32,22 @@ let newCart = {}; // It will be our objects collection
 //     branchInfo[0].classList.add("hidden");
 //   }
 // });
+
+buttonMenu.addEventListener("click", () => {
+  if (navMenu.classList.contains("translate")) {
+    navMenu.classList.remove("translate");
+  } else {
+    navMenu.classList.add("translate");
+  }
+});
+
+arrowSVG.addEventListener("click", () => {
+  if (navMenu.classList.contains("translate")) {
+    navMenu.classList.remove("translate");
+  } else {
+    navMenu.classList.add("translate");
+  }
+});
 
 window.onscroll = () => {
   if (window.pageYOffset > 640) {
