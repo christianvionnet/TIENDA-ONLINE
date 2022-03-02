@@ -607,17 +607,6 @@ input::-webkit-inner-spin-button {
   padding: 0.5em 0;
 }
 
-.footer__media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__media img {
-  width: 40px;
-  margin-right: 1em;
-}
-
 .landing__modal {
   width: 100%;
   height: 100vh;
@@ -632,12 +621,6 @@ input::-webkit-inner-spin-button {
   z-index: 2;
   background: rgba(0, 0, 0, 0.5);
 }
-
-/* @keyframes animacion-modal {
-  0% {
-
-  }
-} */
 
 .modal__content {
   width: 90%;
@@ -718,7 +701,6 @@ input::-webkit-inner-spin-button {
 }
 
 .modal__button {
-  /* width: 100%; */
   font-size: 18px;
   padding: 0.5em;
   border: 1px solid var(--verde-primario);
@@ -864,11 +846,6 @@ hr {
   text-transform: uppercase;
 }
 
-/* .landing__container--6 a:active {
-  color: var(--color-secundario);
-  background-color: var(--verde-primario);
-} */
-
 .landing__container--6 p {
   white-space: pre-line;
 }
@@ -888,7 +865,7 @@ hr {
 .nav__container--menu {
   width: 50%;
   max-width: 300px;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background: var(--color-secundario);
   top: 0;
@@ -916,8 +893,6 @@ hr {
 .nav__container--menu li:not(:first-child):hover {
   border-right: 5px solid var(--color-primario);
   background: #e4e3e3;
-  /* height: 100%; */
-  /* animation: navMenu 0.2s ease; */
   transition: all 0.2s ease;
 }
 
@@ -940,6 +915,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1em;
 }
 
 .nav__media img {
@@ -960,7 +936,44 @@ hr {
   align-items: center;
 }
 
+#menu-back a {
+  cursor: pointer;
+}
+
 #arrow-svg {
   padding: 0 0.5em;
   fill: var(--color-primario);
+  cursor: pointer;
+}
+
+.nav__menu {
+  position: relative;
+  width: auto;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__menu div {
+  width: 30px;
+  height: 4px;
+  background-color: var(--color-secundario);
+}
+
+.nav__menu div::before,
+.nav__menu div::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: var(--color-secundario);
+}
+
+.nav__menu div::before {
+  transform: translateY(10px);
+}
+
+.nav__menu div::after {
+  transform: translateY(-10px);
 }
