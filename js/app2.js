@@ -79,10 +79,10 @@ modalClose.addEventListener("click", (e) => {
 //Function for retreiving data from APIs
 const fetchData = async () => {
   try {
-    // const beerAPI = await fetch("/API/api.json");
-    const beerAPI = await fetch(
-      "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/API/api.json"
-    );
+    const beerAPI = await fetch("/API/api.json");
+    // const beerAPI = await fetch(
+    //   "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/API/api.json"
+    // );
     const beerData = await beerAPI.json();
 
     // const pizzaAPI = await fetch("/API/api2.json");
@@ -117,6 +117,12 @@ const renderItems = (beerData) => {
     beerTemplate.querySelector(".landing__vol").textContent = product.abv;
     beerTemplate.querySelector(".landing__add").dataset.id = product.id;
     beerTemplate.querySelector(".landing__substract").dataset.id = product.id;
+    beerTemplate
+      .querySelector(".landing__img--beer")
+      .setAttribute("src", product.image);
+    beerTemplate
+      .querySelector(".landing__img--beer")
+      .setAttribute("alt", product.title);
     const clone = beerTemplate.cloneNode(true);
     fragment.appendChild(clone);
   });
@@ -141,7 +147,7 @@ const renderBranches = (branchData) => {
   branchData.forEach((branch) => {
     branchTemplate.querySelector("h3").textContent = branch.title;
     branchTemplate.querySelector("p").textContent = branch.address;
-    branchTemplate.querySelector("a").setAttribute("src", branch.map);
+    branchTemplate.querySelector("a").setAttribute("href", branch.map);
     branchTemplate.querySelector("img").setAttribute("src", branch.img);
     const clone = branchTemplate.cloneNode(true);
     fragment.appendChild(clone);

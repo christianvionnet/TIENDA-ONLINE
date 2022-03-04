@@ -132,26 +132,31 @@
           <!-- TEMPLATE BEER-->
           <template id="beer__template">
             <li class="landing__li">
-              <div class="landing__bar">
-                <h3 class="landing__style"></h3>
-                <div>
-                  <button class="landing__substract" type="button">-</button>
-                  <input class="landing__input" type="number" value="0" />
-                  <button class="landing__add" type="button">+</button>
+              <figure>
+                <img class="landing__img--beer" />
+              </figure>
+              <div>
+                <div class="landing__bar">
+                  <h3 class="landing__style"></h3>
+                  <div>
+                    <button class="landing__substract" type="button">-</button>
+                    <input class="landing__input" type="number" value="0" />
+                    <button class="landing__add" type="button">+</button>
+                  </div>
                 </div>
-              </div>
-              <p class="landing__info"></p>
-              <div>
-                <span>Amargor</span>
-                <span class="landing__ibus"></span>
-              </div>
-              <div>
-                <span>Graduación</span>
-                <span class="landing__vol"></span>
-              </div>
-              <div class="landing__price--container">
-                <span>$</span>
-                <span class="landing__price"></span>
+                <p class="landing__info"></p>
+                <div>
+                  <span>Amargor</span>
+                  <span class="landing__ibus"></span>
+                </div>
+                <div>
+                  <span>Graduación</span>
+                  <span class="landing__vol"></span>
+                </div>
+                <div class="landing__price--container">
+                  <span>$</span>
+                  <span class="landing__price"></span>
+                </div>
               </div>
             </li>
           </template>
@@ -221,7 +226,7 @@
 
           <!-- BRANCH TEMPLATE CONTAINER -->
           <div>
-            <ul id="branch-items"></ul>
+            <ul class="landing__ul" id="branch-items"></ul>
           </div>
           <!-- BRANCH TEMPLATE CONTAINER -->
 
