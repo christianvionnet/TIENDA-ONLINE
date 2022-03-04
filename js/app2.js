@@ -79,10 +79,10 @@ modalClose.addEventListener("click", (e) => {
 //Function for retreiving data from APIs
 const fetchData = async () => {
   try {
-    const beerAPI = await fetch("/API/api.json");
-    // const beerAPI = await fetch(
-    //   "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/API/api.json"
-    // );
+    // const beerAPI = await fetch("/API/api.json");
+    const beerAPI = await fetch(
+      "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/API/api.json"
+    );
     const beerData = await beerAPI.json();
 
     // const pizzaAPI = await fetch("/API/api2.json");
