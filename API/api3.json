@@ -4,27 +4,27 @@
     "title": "Barrio Sur",
     "address": "📍 Pasaje 2 de Abril 398",
     "map": "https://goo.gl/maps/gMnmvu485W39QDh39",
-    "img": "/image/branch-sur-2.jpg"
+    "img": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/branch-sur-2.jpg"
   },
   {
     "id": 2,
     "title": "Barrio Norte",
     "address": "📍 Marcos Paz 702",
     "map": "https://goo.gl/maps/J296gmvC4EdG9FHK8",
-    "img": "/image/branch-norte.jpg"
+    "img": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/branch-norte.jpg"
   },
   {
     "id": 3,
     "title": "Tafí Viejo",
     "address": "📍 Av. Alem 171",
     "map": "https://goo.gl/maps/sn8tQy5YHYwkoXRV8",
-    "img": "/image/branch-tafi-2.jpg"
+    "img": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/branch-tafi-2.jpg"
   },
   {
     "id": 4,
     "title": "Yerba Buena",
     "address": "📍 Las Rosas 1051",
     "map": "https://goo.gl/maps/xFufg1aBrQKnmDKt5",
-    "img": "/image/branch-yb.jpg"
+    "img": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/branch-yb.jpg"
   }
 ]

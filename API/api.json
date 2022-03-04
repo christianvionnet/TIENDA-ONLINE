@@ -6,7 +6,7 @@
     "price": 250,
     "ibu": "18 ibus",
     "abv": "5%",
-    "image": "/image/golden-2.jpg"
+    "image": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/golden-2.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": 250,
     "ibu": "18 ibus",
     "abv": "7%",
-    "image": "/image/honey-2.jpg"
+    "image": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/honey-2.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": 250,
     "ibu": "24 ibus",
     "abv": "6%",
-    "image": "/image/porter-2.jpg"
+    "image": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/porter-2.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "price": 250,
     "ibu": "22 ibus",
     "abv": "5.5%",
-    "image": "/image/scottish-2.jpg"
+    "image": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/scottish-2.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "price": 250,
     "ibu": "41 ibus",
     "abv": "6.5%",
-    "image": "/image/ipa-2.jpg"
+    "image": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/ipa-2.jpg"
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "price": 250,
     "ibu": "25 ibus",
     "abv": "5%",
-    "image": "/image/orange-2.jpg"
+    "image": "https://raw.githubusercontent.com/christianvionnet/TIENDA-ONLINE/master/image/orange-2.jpg"
   }
 ]
