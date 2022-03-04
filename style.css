@@ -503,10 +503,19 @@ svg {
   text-align: center !important;
 }
 
+.landing__ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .landing__li {
   display: flex;
   flex-direction: column;
   padding: 1em;
+  width: 100%;
+  max-width: 500px;
 }
 
 .landing__price--container {
