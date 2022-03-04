@@ -22,17 +22,6 @@ const arrowSVG = document.querySelector("#arrow-svg");
 
 let newCart = {}; // It will be our objects collection
 
-// document.addEventListener("scroll", () => {
-//   if (scrollY > 4800 && scrollY < 5200) {
-//     console.log(branchInfo[1]);
-
-//     if (branchInfo[0].classList.contains("hidden")) {
-//       branchInfo[0].classList.remove("hidden");
-//     }
-//     branchInfo[0].classList.add("hidden");
-//   }
-// });
-
 buttonMenu.addEventListener("click", () => {
   if (navMenu.classList.contains("translate")) {
     navMenu.classList.remove("translate");

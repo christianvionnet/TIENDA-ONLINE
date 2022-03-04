@@ -500,6 +500,7 @@ svg {
 
 .landing__prices span {
   padding: 0.5em 0 0;
+  text-align: center !important;
 }
 
 .landing__li {
